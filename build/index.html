@@ -11,7 +11,7 @@
   <header class="header">
     <div class="container">
       <a class="logo header__logo">
-        <img class="logo__image" src="http://placehold.it/150x100">
+        <img class="logo__image" src="http://placehold.it/150x100" alt="Логотип SmartDevice">
         <p class="logo__text">
           <span class="logo__text_bold">Smart Device</span>
           умные технологии
@@ -86,19 +86,19 @@
         <ul class="products__list">
           <li class="prducts__item">
             <a class="products__link" href="#">
-              <img src="http://placehold.it/150x100">
+              <img src="http://placehold.it/150x100" alt="Производство печатных плат">
               <p>Производство печатных плат</p>
             </a>
           </li>
           <li class="prducts__item">
             <a class="products__link" href="#">
-              <img src="http://placehold.it/150x100">
+              <img src="http://placehold.it/150x100" alt="Монтаж печатных плат">
               <p>Монтаж печатных плат</p>
             </a>
           </li>
           <li class="prducts__item">
             <a class="products__link" href="#">
-              <img src="http://placehold.it/150x100">
+              <img src="http://placehold.it/150x100" alt="Комплектующие для светотехники">
               <p>Комплектующие для светотехники</p>
             </a>
           </li>
@@ -111,19 +111,23 @@
         <p class="feedback__text">Мы проконсультируем Вас бесплатно</p>
         <form class="feedback__form" action="#" method="post">
           <p class="feedback__item feedback__item_half-width">
-            <label for="name">Имя</label>
-            <input type="text" id="name" name="name">
+            <label>Имя
+              <input type="text" name="name">
+            </label>
           </p>
           <p class="feedback__item feedback__item_half-width">
-            <label for="tel">Телефон</label>
-            <input type="phone" id="tel" name="tel">
+            <label>Телефон
+              <input type="tel" name="tel">
+            </label>
           </p>
           <p class="feedback__item">
-            <label for="message">Ваш вопрос</label>
-            <textarea id="message"></textarea>
+            <label for="question">Ваш вопрос</label>
+            <textarea id="question"></textarea>
           </p>
           <p class="feedback__item">
-            <input type="checkbox" id="agreement" name="agreement"><label for="agreement">Я согласен на обработку  персональных данных</label>
+            <label>
+              <input type="checkbox" name="agreement">Я согласен на обработку  персональных данных
+            </label>
           </p>
           <button class="button" type="submit">Задать вопрос</button>
         </form>
@@ -139,28 +143,31 @@
     <h2 class="feedback__title">Закажите звонок</h2>
     <p class="feedback__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
     <form class="feedback__form" action="#" method="post">
-      <p class="feedback__item">
-        <label for="name">Имя</label>
-        <input type="text" id="name" name="name">
+      <p class="feedback__item feedback__item_half-width">
+        <label>Имя
+          <input type="text" name="name">
+        </label>
       </p>
-      <p class="feedback__item">
-        <label for="tel">Телефон</label>
-        <input type="phone" id="tel" name="tel">
-      </p>
-      <p class="feedback__item">
-        <label for="message">Ваш вопрос</label>
-        <textarea id="message"></textarea>
-      </p>
-      <p class="feedback__item">
-        <input type="checkbox" id="agreement" name="agreement"><label for="agreement">Я согласен на обработку  персональных данных</label>
-      </p>
-      <button class="button" type="submit">Задать вопрос</button>
-    </form>
-    <button class="modal__close" type="button">
-      <span class="visually-hidden">Закрыть</span>
-    </button>
-  </section>
+      <p class="feedback__item feedback__item_half-width">
+        <label>Телефон
+          <input type="tel" name="tel">
+        </label>
+        </p><p class="feedback__item">
+          <label for="message">Ваш вопрос</label>
+          <textarea id="message"></textarea>
+        </p>
+        <p class="feedback__item">
+          <label>
+            <input type="checkbox" name="agreement" checked="">Я согласен на обработку  персональных данных
+          </label>
+        </p>
+        <button class="button" type="submit">Задать вопрос</button>
+      </form>
+      <button class="modal__close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+    </section>
 
-</body>
-</html>
+  </body>
+  </html>
 
