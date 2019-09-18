@@ -1,0 +1,89 @@
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "PT Mono";
+  font-display: swap;
+  src: local("PT Mono"),
+    local("PTMono-Regular"),
+    url("../fonts/ptmono-regular-webfont.woff2") format("woff2"),
+    url("../fonts/ptmono-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Roboto";
+  font-display: swap;
+  src: local("Roboto Medium"),
+    local("Roboto-Medium"),
+    url("../fonts/roboto-medium-webfont.woff2") format("woff2"),
+    url("../fonts/roboto-medium-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Roboto Condensed";
+  font-display: swap;
+  src: local("Roboto Condensed"),
+    local("RobotoCondensed-Regular"),
+    url("../fonts/robotocondensed-regular-webfont.woff2") format("woff2"),
+    url("../fonts/robotocondensed-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Roboto Condensed";
+  font-display: swap;
+  src: local("Roboto Condensed Bold"),
+    local("RobotoCondensed-Bold"),
+    url("../fonts/robotocondensed-regular-webfont.woff2") format("woff2"),
+    url("../fonts/robotocondensed-regular-webfont.woff") format("woff");
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "PT Mono", "Courier New", monospace;
+  color: $white;
+
+  background-color: $gable-green;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+}
