@@ -58,7 +58,10 @@
   <header class="header">
     <div class="container wrapper">
       <a class="logo header__logo">
-        <img class="logo__image" src="img/logo-desktop.svg" width="52" height="52" alt="Логотип SmartDevice">
+        <picture>
+          <source media="(max-width: 767px)" srcset="img/logo-mobil.svg">
+          <img class="logo__image header__logo-image" src="img/logo-desktop.svg" width="52" height="52" alt="Логотип SmartDevice">
+        </picture>
         <p class="logo__text">
           Smart Device
           <span class="logo__text_small">умные технологии</span>
@@ -70,17 +73,17 @@
         </button>
       </nav>
       <div class="header__contacts">
-        <a class="header__link" href="mailto:info@sd.ru">
+        <a class="header__link" href="mailto:info@sd.ru" aria-label="Электронная почта: info@sd.ru">
           <svg class="header__icon icon-svg" width="19" height="14" focusable="false">
             <use xlink:href="#icon-envelope"></use>
           </svg>
-          info@sd.ru
+          <span>info@sd.ru</span>
         </a>
-        <a class="header__link" href="tel:+74950005252">
+        <a class="header__link" href="tel:+74950005252" aria-label="Телефон: +7(495)000-52-52">
           <svg class="header__icon icon-svg" width="18" height="18" focusable="false">
             <use xlink:href="#icon-phone-call"></use>
           </svg>
-          +7&nbsp;(495)&nbsp;000&nbsp;52&nbsp;52
+          <span>+7&nbsp;(495)&nbsp;000&nbsp;52&nbsp;52</span>
         </a>
         <a class="button header__button" href="#">Заказать звонок</a>
       </div>

@@ -1,10 +1,27 @@
 .header {
   padding-top: 33px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 20px;
+  }
 }
+
+.header__logo-image {
+  @media (max-width: $mobil-width) {
+    @include size(38, 38);
+  }
+}
+
+.header__logo p {
+  @media (max-width: $mobil-width) {
+    display: none;
+  }
+}
+
 
 .header__nav {
   margin-left: auto;
-  
+
 }
 
 .header__toggle {
@@ -20,7 +37,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: 7px;
+    top: 6px;
     left: 5px;
     @include size(37, 1);
 
@@ -28,7 +45,7 @@
   }
 
   &::after {
-    top: 20px;
+    top: 18px;
   }
 
 }
@@ -38,6 +55,11 @@
   align-items: center;
   width: 67.5%;
   margin-left: auto;
+
+  @media (max-width: $tablet-width) {
+    width: auto;
+    margin-left: 0;
+  }
 }
 
 .header__link {
@@ -50,14 +72,39 @@
   @include interactive();
 
   &:first-child {
-    margin-left: auto;
+    @media (min-width: $desktop-width-only) {
+       margin-left: auto;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-left: 40px;
+  }
+
+  @media (max-width: $mobil-width) {
+    margin-left: 30px;
+  }
+}
+
+.header__link span {
+  @media (max-width: $tablet-width) {
+    display: none;
   }
 }
 
 .header__icon {
   margin-right: 12px;
+
+  @media (max-width: $tablet-width) {
+    margin-right: 0;
+    transform: scale(1.33);
+  }
 }
 
 .header__button {
   margin-left: 35 / 660 * 100%;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
