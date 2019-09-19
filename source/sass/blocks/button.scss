@@ -29,6 +29,14 @@
 
     background-color: $blue;
     border-color: $blue;
+
+    @media (max-width: $tablet-width) {
+      min-width: 379px;
+    }
+
+    @media (max-width: $mobil-width) {
+      min-width: 287px;
+    }
   }
 
 }
