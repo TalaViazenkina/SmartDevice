@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>SmartDevice - умные технологии</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <!-- <link href="https://fonts.googleapis.com/css?family=PT+Mono&display=swap&subset=cyrillic" rel="stylesheet"> -->
 </head>
 <body>
   <div style="display:none">
@@ -92,15 +93,21 @@
   <main>
     <h1 class="visually-hidden">SmartDevice - поставка и производство электронных комплектующих</h1>
     <section class="promo">
-      <div class="container">
+      <div class="container promo__wrapper">
+
+        <p class="promo__image">
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/boards-mobil@1x.png 1x, img/boards-mobil@2x 2x">
+            <source media="(max-width: 1023px)" srcset="img/boards-tablet@1x.png 1x, img/boards-tablet@2x 2x">
+            <img src="img/boards-desktop@1x.png" alt="Печатные платы">
+          </picture>
+        </p>
         <div class="promo__description">
           <h2>Печатные платы</h2>
           <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+          <a class="button button_theme_fill promo__button" href="">Получить бесплатную консультацию</a>
         </div>
-        <p class="promo__image">
-          <img src="http://placehold.it/150x100" alt="Печатные платы">
-        </p>
-        <a class="button promo__button" href="">Получить бесплатную консультацию</a>
+
         <a class="promo__scroll" href="#advantages">Скролл вниз</a>
       </div>
     </section>

@@ -1,5 +1,8 @@
 .header {
+  position: relative;
+  z-index: 1;
   padding-top: 33px;
+  padding-bottom: 29px;
 
   @media (max-width: $tablet-width) {
     padding-top: 20px;

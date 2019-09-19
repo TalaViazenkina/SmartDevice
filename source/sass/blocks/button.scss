@@ -16,7 +16,19 @@
 
   border: 1px solid $white;
   border-radius: 5px;
+  cursor: pointer;
 
   @include interactive();
+
+  &_theme_fill {
+    min-width: 407px;
+    padding-top: 17px;
+    padding-bottom: 18px;
+
+    @include font(16, 19);
+
+    background-color: $blue;
+    border-color: $blue;
+  }
 
 }
