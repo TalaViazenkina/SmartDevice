@@ -1,3 +1,63 @@
 .header {
   padding-top: 33px;
 }
+
+.header__nav {
+  margin-left: auto;
+  
+}
+
+.header__toggle {
+  position: relative;
+  @include size(47, 23);
+
+  background-color: transparent;
+  border: none;
+
+  @include interactive();
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 5px;
+    @include size(37, 1);
+
+    background-color: $white;
+  }
+
+  &::after {
+    top: 20px;
+  }
+
+}
+
+.header__contacts {
+  display: flex;
+  align-items: center;
+  width: 67.5%;
+  margin-left: auto;
+}
+
+.header__link {
+  display: flex;
+  align-items: center;
+  margin-left: 65 / 660 * 100%;
+  line-height: 22px;
+  color: $white;
+
+  @include interactive();
+
+  &:first-child {
+    margin-left: auto;
+  }
+}
+
+.header__icon {
+  margin-right: 12px;
+}
+
+.header__button {
+  margin-left: 35 / 660 * 100%;
+}

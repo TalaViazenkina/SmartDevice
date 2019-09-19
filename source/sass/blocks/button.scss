@@ -1,0 +1,22 @@
+.button {
+  display: block;
+  min-width: 180px;
+  padding-top: 13px;
+  padding-right: 15px;
+  padding-bottom: 14px;
+  padding-left: 15px;
+
+  @include font(14, 16);
+  font-weight: 700;
+  font-family: $roboto-condensed;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  color: $white;
+
+  border: 1px solid $white;
+  border-radius: 5px;
+
+  @include interactive();
+
+}

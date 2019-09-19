@@ -1,9 +1,21 @@
 @mixin font($font-size, $line-height) {
-  font-size: $font-size;
-  line-height: $line-height;
+  font-size: $font-size * 1px;
+  line-height: $line-height * 1px;
 }
 
 @mixin size($width, $height) {
-  width: $width;
-  height: $height;
+  width: $width * 1px;
+  height: $height * 1px;
+}
+
+@mixin interactive() {
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
