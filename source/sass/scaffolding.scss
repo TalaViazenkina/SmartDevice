@@ -38,8 +38,8 @@
   font-display: swap;
   src: local("Roboto Condensed Bold"),
     local("RobotoCondensed-Bold"),
-    url("../fonts/robotocondensed-regular-webfont.woff2") format("woff2"),
-    url("../fonts/robotocondensed-regular-webfont.woff") format("woff");
+    url("../fonts/robotocondensed-bold-webfont.woff2") format("woff2"),
+    url("../fonts/robotocondensed-bold-webfont.woff") format("woff");
 }
 
 html {
@@ -59,7 +59,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  font-family: "PT Mono", "Courier New", monospace;
+  font-family: $pt-mono;
   color: $white;
 
   background-color: $gable-green;

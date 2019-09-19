@@ -5,16 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>SmartDevice - умные технологии</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+  <div style="display:none">
+    <include src="build/img/sprite_auto.svg"></include>
+  </div>
   <header class="header">
     <div class="container">
       <a class="logo header__logo">
-        <img class="logo__image" src="http://placehold.it/150x100" alt="Логотип SmartDevice">
+        <img class="logo__image" src="img/logo-desktop.svg" width="52" height="52" alt="Логотип SmartDevice">
         <p class="logo__text">
-          <span class="logo__text_bold">Smart Device</span>
-          умные технологии
+          Smart Device
+          <span class="logo__text_small">умные технологии</span>
         </p>
       </a>
       <div class="header__contacts">
@@ -141,8 +144,8 @@
         <a class="logo footer__logo" href="#">
           <img class="logo__image" src="http://placehold.it/150x100" alt="Логотип ServiceDevice">
           <p class="logo__text">
-            <span class="logo__text_bold">Service Device</span>
-            умные технологии
+            Service Device
+            <span class="logo__text_small">умные технологии</span>
           </p>
         </a>
         <ul class="footer__social social">

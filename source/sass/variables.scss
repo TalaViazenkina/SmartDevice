@@ -15,9 +15,19 @@ $slate-gray: #788891; // серый текст в лого
 $corduroy: #626962; // разделители в футере
 $gable-green: #1B2D37; // текст в футере, темный фон
 
-/* Переменные для адаптивной сетки */
+// Переменные для адаптивной сетки
 $tablet-width: 1023px;
 $mobil-width: 767px;
 
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
+
+$mobil-padding: 15px;
+$tablet-padding: 25px;
+$desktop-padding: 35px;
+
+// шрифты
+$pt-mono: "PT Mono", "Courier New", monospace;
+$roboto: "Roboto", "Arial", sans-serif;
+$roboto-condensed: "Roboto Condensed", "Arial", sans-serif;
+
