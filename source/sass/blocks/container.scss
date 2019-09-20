@@ -8,5 +8,11 @@
     padding-left: $mobil-padding;
     padding-right: $mobil-padding;
   }
+
+  &_narrow {
+    @media (min-width: $desktop-width-only) {
+      max-width: 1220px;
+    }
+  }
 }
 

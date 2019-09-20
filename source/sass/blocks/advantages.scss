@@ -1,0 +1,27 @@
+.advantages {
+  padding-top: 95px;
+  color: $gray-darkest;
+  background-color: $white;
+}
+
+.advantages__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-right: -15px;
+  margin-bottom: 0;
+  margin-left: -15px;
+  padding-left: 0;
+
+  list-style: none;
+}
+
+.advantages__item {
+  display: flex;
+  width: 50%;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+
+}
