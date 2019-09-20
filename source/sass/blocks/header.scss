@@ -26,6 +26,10 @@
 .header__nav {
   margin-left: auto;
 
+  @media (max-width: $mobil-width) {
+     padding-bottom: 10px;
+  }
+
 }
 
 .header__toggle {
@@ -64,6 +68,10 @@
     width: auto;
     margin-left: 0;
   }
+
+    @media (max-width: $mobil-width) {
+       padding-bottom: 10px;
+    }
 }
 
 .header__link {

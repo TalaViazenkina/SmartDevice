@@ -3,6 +3,16 @@
   padding-bottom: 95px;
   color: $gray-darkest;
   background-color: $white;
+
+  @media (max-width: $tablet-width) {
+     padding-top: 45px;
+     padding-bottom: 80px;
+  }
+
+  @media (max-width: $mobil-width) {
+     padding-top: 50px;
+     padding-bottom: 65px;
+  }
 }
 
 .about-us__description {
@@ -11,23 +21,62 @@
   flex-direction: column;
   align-items: flex-start;
   padding-left: 60px;
+
+  @media (max-width: $tablet-width) {
+     padding-left: 45px;
+  }
+
+  @media (max-width: $mobil-width) {
+     padding-left: 0;
+  }
 }
 
 .about-us__description h2 {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 
   @include font(36, 51);
   font-weight: 400;
+
+  @media (max-width: $tablet-width) {
+    @include font(32, 45);
+  }
+
+  @media (max-width: $mobil-width) {
+    @include font(28, 39);
+  }
 }
 
 .about-us__description p {
-  margin-top: 0;
-  margin-bottom: 20px;
+  margin-top: 22px;
+  margin-bottom: 0;
 
-  &:last-of-type {
-    margin-bottom: 35px;
+  @media (max-width: $mobil-width) {
+    margin-top: 20px;
+    padding-bottom: 20px;
   }
+}
+
+.about-us__hidden:first-of-type {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+     display: inline;
+  }
+}
+
+.about-us__hidden:last-of-type {
+  @media (max-width: $tablet-width) {
+    font-size: 0;
+  }
+}
+
+.about-us__button {
+  margin-top: 35px;
+
+    @media (max-width: $mobil-width) {
+      margin-top: 5px;
+    }
 }
 
 .about-us__date {
@@ -39,7 +88,15 @@
   margin-bottom: 0;
   padding-right: 5px;
   padding-left: 5px;
-  padding-top: 10px;
+  padding-top: 5px;
+
+  @media (max-width: $tablet-width) {
+    width: 140px;
+  }
+
+  @media (max-width: $mobil-width) {
+    display: none;
+  }
 
 }
 

@@ -14,7 +14,7 @@
     margin-top: -100px;
   }
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $mobil-width) {
     background-image: url("../img/bg-tablet@1x.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -41,6 +41,7 @@
 
   @media (max-width: $mobil-width) {
     min-height: 662px;
+    padding-bottom: 50px;
   }
 }
 
@@ -81,7 +82,7 @@
 
    @media (max-width: $mobil-width) {
      @include font(40, 47);
-     padding-top: 150px;
+     padding-top: 180px;
    }
 }
 
@@ -102,6 +103,7 @@
   @media (max-width: $mobil-width) {
     @include font(16, 25);
     margin-left: 0;
+    margin-bottom: 15px;
   }
 
   &::before {
@@ -138,6 +140,7 @@
 
     @media (max-width: $mobil-width) {
       left: 56%;
+      top: 105px;
       @include size(301, 220);
       transform: translate(-50%);
     }
