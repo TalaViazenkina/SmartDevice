@@ -19,6 +19,14 @@
       color: $white;
     }
   }
+
+  @media (max-width: $tablet-width) {
+    min-height: 232px;
+    padding-top: 65px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+  }
 }
 
 .advantage h3 {
@@ -28,6 +36,10 @@
   font-weight: 400;
   @include font(24, 34);
   font-family: $roboto-condensed;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 10px;
+  }
 
 }
 
@@ -44,4 +56,11 @@
   left: 45px;
 
   transform: translateY(-100%);
+
+  @media (max-width: $tablet-width) {
+    top: 60px;
+    left: 25px;
+
+    transform: translateY(-100%) scale(0.9);
+  }
 }
