@@ -8,6 +8,11 @@
   height: $height * 1px;
 }
 
+@mixin square($value) {
+  width: $value * 1px;
+  height: $value * 1px;
+}
+
 @mixin interactive() {
   &:hover,
   &:focus {
