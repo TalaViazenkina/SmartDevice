@@ -14,6 +14,53 @@
      padding-top: 30px;
      padding-bottom: 90px;
   }
+
+  &_modal {
+    padding-top: 30px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+
+    .feedback__title {
+      margin-bottom: 15px;
+      @include font(28, 39);
+    }
+
+    .feedback__text {
+      padding-right: 25px;
+    }
+
+    .feedback__form {
+      margin-top: 15px;
+    }
+
+    .feedback__item_half-width {
+      width: 100%;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    label[for="modal-agreement"] {
+      padding-right: 15px;
+
+      &::before {
+        border-color: $white;
+        left: 0;
+      }
+
+      &::after {
+        left: 6px;
+      }
+    }
+
+    textarea[name="modal-message"] {
+      height: 104px;
+    }
+
+    .feedback__button {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .feedback__wrapper {
@@ -114,7 +161,6 @@
     padding-bottom: 15px;
     padding-left: 0;
   }
-
 
   &_half-width {
     width: 50%;
@@ -225,18 +271,14 @@
   &::before {
     content: "";
     position: absolute;
-    top: 7px;
-    left: 8px;
+    top: 10px;
+    left: 10px;
     align-self: flex-start;
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 16px;
     border: 1px solid transparent;
 
     @media (max-width: $tablet-width) {
-      width: 17px;
-      height: 16px;
-      top: 10px;
-      left: 10px;
       border-color: $white;
     }
 

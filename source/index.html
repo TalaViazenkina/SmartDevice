@@ -273,34 +273,32 @@
     </div>
   </footer>
 
-  <section class="modal feedback">
+  <section class="modal feedback feedback_modal">
     <h2 class="feedback__title">Закажите звонок</h2>
     <p class="feedback__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
     <form class="feedback__form" action="#" method="post">
       <p class="feedback__item feedback__item_half-width">
-        <label>Имя
-          <input  type="text" name="name">
-        </label>
+        <label class="visually-hidden" for="name" >Имя</label>
+        <input id="name" type="text" name="name"  placeholder="Имя" title="Имя">
       </p>
       <p class="feedback__item feedback__item_half-width">
-        <label>Телефон
-          <input  type="tel" name="tel">
-        </label>
-        <p class="feedback__item">
-          <label for="message">Ваш вопрос</label>
-          <textarea id="message"></textarea>
-        </p>
-        <p class="feedback__item">
-          <label>
-            <input type="checkbox" name="agreement" checked>Я согласен на обработку  персональных данных
-          </label>
-        </p>
-        <button class="button" type="submit">Задать вопрос</button>
-      </form>
+        <label class="visually-hidden" for="tel"></label>
+        <input id="tel" type="tel" name="tel" placeholder="Телефон" required>
+      </p>
+      <p class="feedback__item">
+        <textarea name="modal-message" placeholder="Ваш вопрос" aria-role="Введите ваш вопрос" required></textarea>
+      </p>
+      <p class="feedback__item feedback__item_half-width feedback__agreement">
+        <input class="visually-hidden" id="modal-agreement" type="checkbox" name="agreement" checked>
+        <label for="modal-agreement">Я согласен на обработку  персональных данных</label>
+      </p>
+      <button class="button feedback__button" type="submit">Отправить</button>
+    </form>
       <button class="modal__close" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
     </section>
+    <div class="overlay"></div>
 
   </body>
   </html>

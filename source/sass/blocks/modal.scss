@@ -1,0 +1,54 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+
+  display: none;
+  width: 490px;
+
+  transform: translate(-50%, -50%);
+
+  &_show {
+    display: block;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  width: 30px;
+  height: 30px;
+
+  font-size: 0;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @include interactive();
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 14px;
+    left: 4px;
+
+    width: 23px;
+    height: 2px;
+
+    background-color: $white;
+
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+
