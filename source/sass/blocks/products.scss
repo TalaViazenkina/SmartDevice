@@ -8,6 +8,10 @@
     padding-top: 50px;
     padding-bottom: 55px;
   }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 50px;
+  }
 }
 
 .products h2 {
