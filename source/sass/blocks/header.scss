@@ -26,7 +26,7 @@
 .header__nav {
   margin-left: auto;
 
-  @media (max-width: $mobil-width) {
+  @media (max-width: $tablet-width) {
      padding-bottom: 10px;
   }
 
@@ -67,10 +67,7 @@
   @media (max-width: $tablet-width) {
     width: auto;
     margin-left: 0;
-  }
-
-  @media (max-width: $mobil-width) {
-     padding-bottom: 10px;
+    padding-bottom: 10px;
   }
 }
 

@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
+  overflow-x: hidden;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-desktop@2x.png");
@@ -36,7 +37,7 @@
   @media (max-width: $tablet-width) {
     min-height: 685px;
     padding-bottom: 100px;
-    overflow-x: hidden;
+
   }
 
   @media (max-width: $mobil-width) {

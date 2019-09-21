@@ -1,7 +1,13 @@
 .products {
   padding-top: 90px;
+  padding-bottom: 110px;
   color: $white;
   background-color: $gable-green;
+
+  @media (max-width: $tablet-width) {
+     padding-top: 50px;
+     padding-bottom: 55px;
+  }
 }
 
 .products h2 {
@@ -11,6 +17,11 @@
   @include font(36, 51);
   font-weight: 400;
   font-family: $roboto-condensed;
+
+  @media (max-width: $tablet-width) {
+    @include font(32, 45);
+    margin-bottom: 25px;
+  }
 }
 
 .products__list {
@@ -32,6 +43,12 @@
   padding-right: 15px;
   padding-bottom: 15px;
   padding-left: 15px;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
 }
 
 .products__link {
@@ -76,8 +93,8 @@
 
 .products__link h3 {
   position: absolute;
-  top: 8%;
-  left: 12%;
+  top: 50px;
+  left: 45px;
   width: 160px;
   margin-top: 0;
   margin-bottom: 0;
@@ -86,6 +103,11 @@
   font-weight: 400;
   font-family: $roboto-condensed;
   color: $white;
+
+  @media (max-width: $tablet-width) {
+    top: 40px;
+    left: 45px;
+  }
 }
 
 
