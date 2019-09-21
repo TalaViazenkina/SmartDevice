@@ -4,9 +4,9 @@
   padding-left: $desktop-padding;
   padding-right: $desktop-padding;
 
-  @media (max-width: $mobil-width) {
-    padding-left: $mobil-padding;
-    padding-right: $mobil-padding;
+  @media (max-width: $mobile-width) {
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
   }
 
   &_narrow {

@@ -15,7 +15,7 @@
     margin-top: -100px;
   }
 
-  @media (max-width: $mobil-width) {
+  @media (max-width: $mobile-width) {
     background-image: url("../img/bg-tablet@1x.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -40,7 +40,7 @@
 
   }
 
-  @media (max-width: $mobil-width) {
+  @media (max-width: $mobile-width) {
     min-height: 662px;
     padding-bottom: 50px;
   }
@@ -60,7 +60,7 @@
     margin-top: 0;
   }
 
-  @media (max-width: $mobil-width) {
+  @media (max-width: $mobile-width) {
      width: auto;
      padding-left: 0;
   }
@@ -81,7 +81,7 @@
     @include font(60, 70);
  }
 
-   @media (max-width: $mobil-width) {
+   @media (max-width: $mobile-width) {
      @include font(40, 47);
      padding-top: 180px;
    }
@@ -101,7 +101,7 @@
     @include font(18, 28);
   }
 
-  @media (max-width: $mobil-width) {
+  @media (max-width: $mobile-width) {
     @include font(16, 25);
     margin-left: 0;
     margin-bottom: 15px;
@@ -139,7 +139,7 @@
     @include size(465, 340);
   }
 
-    @media (max-width: $mobil-width) {
+    @media (max-width: $mobile-width) {
       left: 56%;
       top: 105px;
       @include size(301, 220);
@@ -156,7 +156,7 @@
   }
 
 
-  @media (max-width: $mobil-width) {
+  @media (max-width: $mobile-width) {
     margin-left: 0;
     align-self: center;
   }
@@ -165,13 +165,13 @@
 .promo__button span:last-child {
   display: none;
 
-  @media (max-width: $mobil-width) {
+  @media (max-width: $mobile-width) {
     display: block;
   }
 }
 
 .promo__button span:first-child {
-  @media (max-width: $mobil-width) {
+  @media (max-width: $mobile-width) {
      display: none;
   }
 }

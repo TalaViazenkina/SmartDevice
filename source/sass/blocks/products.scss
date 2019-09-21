@@ -5,8 +5,8 @@
   background-color: $gable-green;
 
   @media (max-width: $tablet-width) {
-     padding-top: 50px;
-     padding-bottom: 55px;
+    padding-top: 50px;
+    padding-bottom: 55px;
   }
 }
 
@@ -21,6 +21,12 @@
   @media (max-width: $tablet-width) {
     @include font(32, 45);
     margin-bottom: 25px;
+  }
+
+  @media (max-width: $mobile-width) {
+    @include font(28, 39);
+    margin-bottom: 25px;
+    padding-left: 10px;
   }
 }
 
@@ -48,6 +54,10 @@
     width: 100%;
     padding-top: 23px;
     padding-bottom: 23px;
+  }
+  @media (max-width: $mobile-width) {
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
 
@@ -106,7 +116,11 @@
 
   @media (max-width: $tablet-width) {
     top: 40px;
-    left: 45px;
+  }
+
+  @media (max-width: $mobile-width) {
+    top: 20px;
+    left: 35px;
   }
 }
 
