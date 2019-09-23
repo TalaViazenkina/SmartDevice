@@ -3,26 +3,5 @@
   flex-shrink: 0;
 }
 
-.logo__text {
-  display: flex;
-  flex-direction: column;
-
-  margin-top: 5px;
-  margin-bottom: 0;
-  padding-left: 18px;
-  padding-right: 18px;
-
-  @include font(25, 29);
-  font-weight: 700;
-  font-family: $roboto-condensed;
-
-  &_small {
-  @include font(12, 14);
-  font-weight: 500;
-  font-family: $roboto;
-  color: $slate-gray;
-  }
-
-}
 
 

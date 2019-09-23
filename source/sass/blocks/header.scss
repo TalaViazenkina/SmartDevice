@@ -10,15 +10,12 @@
   }
 }
 
-.header__logo-image {
+.header__logo-icon {
   @media (max-width: $mobile-width) {
-    @include size(38, 38);
-  }
-}
-
-.header__logo p {
-  @media (max-width: $mobile-width) {
-    display: none;
+    .header__logo-text {
+      display: none;
+    }
+    height: 38px;
   }
 }
 

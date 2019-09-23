@@ -21,24 +21,24 @@
     padding-bottom: 25px;
     padding-left: 25px;
 
-    .feedback__title {
+    h2 {
       margin-bottom: 15px;
       @include font(28, 39);
     }
 
-    .feedback__text {
+    .feedback p {
       padding-right: 25px;
     }
 
-    .feedback__form {
+    .feedback form {
       margin-top: 15px;
     }
 
-    .feedback__item_half-width {
-      width: 100%;
-      padding-top: 15px;
-      padding-bottom: 15px;
-    }
+/*     .feedback__item_half-width {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+} */
 
     label[for="modal-agreement"] {
       padding-right: 15px;
@@ -102,7 +102,7 @@
   }
 }
 
-.feedback__title {
+.feedback h2 {
   margin-top: 0;
   margin-bottom: 5px;
   padding-left: 15px;
@@ -121,7 +121,7 @@
   }
 }
 
-.feedback__text {
+.feedback p {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 15px;
@@ -131,11 +131,14 @@
   }
 }
 
-.feedback__form {
+.feedback form {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
   margin-top: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
 
   @media (max-width: $tablet-width) {
     margin-top: 35px;
@@ -146,7 +149,7 @@
   }
 }
 
-.feedback__item {
+/* .feedback__item {
   width: 100%;
   margin-top: 0;
   margin-bottom: 0;
@@ -169,15 +172,16 @@
       width: 100%;
     }
   }
-}
+} */
 
 .feedback__agreement {
   order: 1;
 }
 
-.feedback__item input:not([type="checkbox"]) {
-  width: 100%;
+.feedback input:not([type="checkbox"]) {
+  width: 280 / 590 * 100%;
   height: 50px;
+  margin-bottom: 40px;
   padding-top: 10px;
   padding-right: 20px;
   padding-bottom: 10px;
@@ -210,7 +214,7 @@
   }
 }
 
-.feedback__item textarea {
+.feedback textarea {
   width: 100%;
   height: 154px;
   padding-top: 10px;
@@ -254,7 +258,7 @@
 
 }
 
-.feedback__agreement label {
+.feedback label:not(.visually-hidden) {
   position: relative;
   display: block;
   padding-left: 45px;
@@ -311,11 +315,11 @@
   }
 }
 
-.feedback__agreement input[type="checkbox"]:checked ~ label::after {
+.feedback input[type="checkbox"]:checked ~ label::after {
   display: block;
 }
 
-.feedback__agreement input[type="checkbox"]:focus ~ label::before {
+.feedback input[type="checkbox"]:focus ~ label::before {
   border-color: $white;
 
   @media (max-width: $tablet-width) {
