@@ -149,6 +149,7 @@
 
   @media (max-width: $mobile-width) {
     margin-top: 28px;
+    margin-right: auto;
     margin-bottom: 28px;
   }
 }
@@ -226,6 +227,7 @@
   }
 
   @media (max-width: $mobile-width) {
+    width: 100%;
     margin-bottom: 30px;
   }
 }
