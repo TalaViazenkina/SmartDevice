@@ -231,11 +231,12 @@
               <input id="name" type="text" name="name" placeholder="Имя">
             </p>
             <p class="feedback__item feedback__item_half-width">
-              <label class="visually-hidden" for="tel"></label>
+              <label class="visually-hidden" for="tel">Телефон</label>
               <input id="tel" type="tel" name="tel" placeholder="Телефон" required="">
             </p>
             <p class="feedback__item">
-              <textarea name="message" placeholder="Ваш вопрос" aria-role="Введите ваш вопрос" required=""></textarea>
+              <label class="visually-hidden" for="message">Ваш вопрос</label>
+              <textarea id="message" name="message" placeholder="Ваш вопрос" required=""></textarea>
             </p>
             <p class="feedback__item feedback__item_half-width feedback__agreement">
               <input class="visually-hidden" id="agreement" type="checkbox" name="agreement" checked="">
@@ -370,11 +371,12 @@
         <input id="modal-name" type="text" name="name" placeholder="Имя" title="Имя">
       </p>
       <p class="feedback__item feedback__item_half-width">
-        <label class="visually-hidden" for="modal-tel"></label>
+        <label class="visually-hidden" for="modal-tel">Телефон</label>
         <input id="modal-tel" type="tel" name="tel" placeholder="Телефон" required="">
       </p>
       <p class="feedback__item">
-        <textarea name="modal-message" placeholder="Ваш вопрос" aria-role="Введите ваш вопрос" required=""></textarea>
+        <label class="visually-hidden" for="modal-message">Ваш вопрос</label>
+        <textarea id="modal-message" name="modal-message" placeholder="Ваш вопрос" required=""></textarea>
       </p>
       <p class="feedback__item feedback__item_half-width feedback__agreement">
         <input class="visually-hidden" id="modal-agreement" type="checkbox" name="agreement" checked="">
