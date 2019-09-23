@@ -24,13 +24,13 @@
   margin-left: auto;
 
   @media (max-width: $tablet-width) {
-     padding-bottom: 10px;
+    padding-bottom: 10px;
   }
-
 }
 
 .header__toggle {
   position: relative;
+
   @include size(47, 23);
 
   background-color: transparent;
@@ -44,6 +44,7 @@
     position: absolute;
     top: 6px;
     left: 5px;
+
     @include size(37, 1);
 
     background-color: $white;
@@ -52,7 +53,6 @@
   &::after {
     top: 18px;
   }
-
 }
 
 .header__contacts {
@@ -79,7 +79,7 @@
 
   &:first-child {
     @media (min-width: $desktop-width-only) {
-       margin-left: auto;
+      margin-left: auto;
     }
   }
 

@@ -41,6 +41,7 @@
   margin-bottom: 15px;
 
   font-weight: 400;
+
   @include font(24, 34);
   font-family: $roboto-condensed;
 
@@ -51,7 +52,6 @@
   @media (max-width: $mobile-width) {
     @include font(20, 28);
   }
-
 }
 
 .advantage p {
@@ -61,7 +61,7 @@
   color: $gray-darkest;
 }
 
- .advanatge__icon {
+.advanatge__icon {
   position: absolute;
   top: 75px;
   left: 45px;

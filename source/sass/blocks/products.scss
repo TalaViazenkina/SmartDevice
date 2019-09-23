@@ -59,6 +59,7 @@
     padding-top: 23px;
     padding-bottom: 23px;
   }
+
   @media (max-width: $mobile-width) {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -77,6 +78,7 @@
     right: 0;
     bottom: 0;
     z-index: 1;
+
     @include square(63);
 
     background-color: $blue;
@@ -96,7 +98,6 @@
     border-bottom: none;
     transform: rotate(45deg);
   }
-
 }
 
 .products__link img {
@@ -127,5 +128,3 @@
     left: 35px;
   }
 }
-
-
