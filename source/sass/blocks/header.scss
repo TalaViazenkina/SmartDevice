@@ -94,7 +94,7 @@
 
 .header__link span {
   @media (max-width: $tablet-width) {
-    display: none;
+    @include visually-hidden();
   }
 }
 

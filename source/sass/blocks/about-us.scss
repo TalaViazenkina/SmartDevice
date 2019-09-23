@@ -82,7 +82,7 @@
 
 .about-us__hidden:last-of-type {
   @media (max-width: $tablet-width) {
-    font-size: 0;
+    @include visually-hidden();
   }
 }
 
