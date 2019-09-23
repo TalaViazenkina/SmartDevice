@@ -27,20 +27,22 @@
 .promo__wrapper {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: flex-start;
 
-  min-height: 100vh;
+  height: 100vh;
   padding-top: 120px;
   padding-bottom: 100px;
 
   @media (max-width: $tablet-width) {
+    height: auto;
     min-height: 685px;
     padding-bottom: 100px;
 
   }
 
   @media (max-width: $mobile-width) {
+    height: auto;
     min-height: 662px;
     padding-bottom: 50px;
   }
@@ -48,10 +50,11 @@
 
 .promo__description {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: flex-start;
   width: 720px;
   margin-top: auto;
+  margin-right: calc(100% - 720px);
   margin-bottom: auto;
 
   @media (max-width: $tablet-width) {
@@ -61,7 +64,7 @@
   }
 
   @media (max-width: $mobile-width) {
-     width: auto;
+     width: 100%;
      padding-left: 0;
   }
 }
@@ -88,6 +91,7 @@
 }
 
 .promo__description p {
+  width: 100%;
   position: relative;
   margin-top: 30px;
   margin-bottom: 25px;
@@ -140,10 +144,11 @@
   }
 
     @media (max-width: $mobile-width) {
-      left: 56%;
+      left: auto;
+      right: -5px;
       top: 105px;
       @include size(301, 220);
-      transform: translate(-50%);
+
     }
 }
 
@@ -158,7 +163,6 @@
 
   @media (max-width: $mobile-width) {
     margin-left: 0;
-    align-self: center;
   }
 }
 
