@@ -33,6 +33,28 @@
   align-self: stretch;
   margin-bottom: 50px;
 
+  &::before {
+    content: '';
+    position: absolute;
+    right: $tablet-padding * -1;
+    bottom: 0;
+    left: $tablet-padding * -1;
+
+    display: none;
+
+    height: 1px;
+    background-color: rgba($corduroy, 0.2);
+
+    @media (max-width: $tablet-width) {
+       display: block;
+    }
+
+    @media (max-width: $mobile-width) {
+      right: $mobile-padding * -1;
+      left: $mobile-padding * -1;
+    }
+  }
+
   @media (max-width: $tablet-width) {
     position: relative;
     flex-direction: row;
@@ -41,17 +63,14 @@
     margin-bottom: 40px;
     padding-top: 20px;
     padding-bottom: 25px;
+  }
 
-    &::before {
-      content: '';
-      position: absolute;
-      right: $tablet-padding * -1;
-      bottom: 0;
-      left: $tablet-padding * -1;;
-
-      height: 1px;
-      background-color: rgba($corduroy, 0.2);
-    }
+  @media (max-width: $mobile-width) {
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom:0;
+    padding-top: 45px;
+    padding-bottom: 40px;
   }
 }
 
@@ -60,6 +79,12 @@
   color: $gray-green;
 
   @include interactive();
+
+  @media (max-width: $mobile-width) {
+    margin-right: auto;
+    margin-bottom: 75px;
+    margin-left: auto;
+  }
 }
 
 .footer__social {
@@ -68,6 +93,12 @@
   @media (max-width: $tablet-width) {
     width: auto;
     max-width: 25%;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    justify-content: center;
+    max-width: none;
   }
 }
 
@@ -78,6 +109,22 @@
   @media (max-width: $tablet-width) {
     align-self: flex-start;
     width: 50%;
+  }
+
+  @media (max-width: $mobile-width) {
+    position: relative;
+     width: 100%;
+
+     &::before {
+      content: '';
+      position: absolute;
+      right: $mobile-padding * -1;
+      bottom: 0;
+      left: $mobile-padding * -1;;
+
+      height: 1px;
+      background-color: rgba($corduroy, 0.2);
+    }
   }
 }
 
@@ -99,7 +146,70 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: $gable-green;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 28px;
+    margin-bottom: 28px;
+  }
 }
+
+.footer__toggle {
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include size(50, 72);
+    margin-right: $mobile-padding * -1;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    @include interactive();
+  }
+}
+
+.footer__info {
+  @media (max-width: $mobile-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &_closed {
+      .footer__toggle-icon_close {
+        display:none;
+      }
+
+      .footer__list {
+        display:none;
+      }
+    }
+
+    &_opened {
+      .footer__toggle-icon_open {
+        display:none;
+      }
+
+      .footer__list {
+        display:block;
+      }
+    }
+
+    &_nojs {
+      .footer__toggle {
+        display: none;
+      }
+
+      .footer__list {
+        display: block;
+      }
+    }
+  }
+
+}
+
 
 .footer__list {
   display: flex;
@@ -112,12 +222,20 @@
   list-style: none;
 
   @media (max-width: $tablet-width) {
-     margin-bottom: 35px;
+    margin-bottom: 35px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 30px;
   }
 }
 
 .footer__item {
   width: 100%;
+
+  @media (max-width: $mobile-width) {
+    padding-right: 10px;
+  }
 
   &_half-width {
     @media (min-width: $desktop-width-only) {
@@ -138,6 +256,11 @@
   @media (max-width: $tablet-width) {
     align-self: flex-start;
     width: 50%;
+  }
+
+  @media (max-width: $mobile-width) {
+     width: 100%;
+     padding-left: 0;
   }
 }
 
@@ -162,11 +285,23 @@
       display: none;
     }
   }
+
+  @media (max-width: $mobile-width) {
+    top: 110px;
+    left: 0;
+    width: 100%;
+    transform: none;
+  }
 }
 
 .footer__copyright p {
   margin-top: 0;
   margin-bottom: 0;
+
+  @media (max-width: $mobile-width) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .footer__privacy {
@@ -184,8 +319,21 @@
     margin-bottom: 0;
     padding-top: 22px;
     padding-bottom: 22px;
+  }
 
-    &::before {
+  @media (max-width: $mobile-width) {
+    padding-top: 25px;
+    padding-bottom: 0;
+
+    a {
+      margin-right: auto;
+      margin-bottom: 25px;
+      margin-left: auto;
+    }
+  }
+
+  &::before {
+    @media (max-width: $tablet-width) {
       content: '';
       position: absolute;
       right: $tablet-padding * -1;
@@ -195,5 +343,11 @@
       height: 1px;
       background-color: rgba($corduroy, 0.2);
     }
+
+    @media (max-width: $mobile-width) {
+      right: $mobile-padding * -1;
+      left: $mobile-padding * -1;
+    }
   }
+
 }

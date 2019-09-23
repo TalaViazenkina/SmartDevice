@@ -133,3 +133,46 @@ if (form) {
     }
   });
 }
+
+// открытие и закрытие меню в футере, мобильная версия
+var footerNav = document.querySelector('.footer__nav');
+var navToggle = document.querySelector('.footer__nav .footer__toggle');
+
+var footerContact = document.querySelector('.footer__contacts');
+var contactToggle = document.querySelector('.footer__contacts .footer__toggle');
+
+/**
+* переключает класс
+* @param {HTMLElement} el
+* @param {string} class1
+* @param {string} class2
+*/
+
+var toggle = function (el, class1, class2) {
+  if (el.classList.contains(class1)) {
+    el.classList.remove(class1);
+    el.classList.add(class2);
+  } else {
+    el.classList.add(class1);
+    el.classList.remove(class2);
+  }
+};
+
+if (footerNav) {
+  footerNav.classList.remove('footer__info_nojs');
+  if (navToggle) {
+    navToggle.addEventListener('click', function () {
+      toggle(footerNav, 'footer__info_closed', 'footer__info_opened');
+    });
+  }
+}
+
+if (footerContact) {
+  footerContact.classList.remove('footer__info_nojs');
+  if (contactToggle) {
+    contactToggle.addEventListener('click', function () {
+      toggle(footerContact, 'footer__info_closed', 'footer__info_opened');
+    });
+  }
+}
+
