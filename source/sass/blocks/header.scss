@@ -10,12 +10,20 @@
   }
 }
 
+.header__logo {
+  @media (max-width: $mobile-width) {
+    width: 38px;
+    height: 38px;
+  }
+}
+
 .header__logo-icon {
   @media (max-width: $mobile-width) {
+    height: 38px;
+
     .header__logo-text {
       display: none;
     }
-    height: 38px;
   }
 }
 

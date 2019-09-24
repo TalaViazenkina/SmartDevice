@@ -4,6 +4,10 @@
   color: $white;
 
   background-color: $blue;
+  background-image: url("../img/bg-polygon3.svg");
+  background-repeat: no-repeat;
+  background-position: right, bottom;
+  background-size: 90% auto;
 
   @media (max-width: $tablet-width) {
     padding-top: 80px;

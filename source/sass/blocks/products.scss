@@ -72,6 +72,11 @@
 
   @include interactive();
 
+  @media (max-width: $tablet-width) {
+    height: 256px;
+    overflow: hidden;
+  }
+
   &::before {
     content: "";
     position: absolute;
