@@ -178,9 +178,12 @@
       left: 125px;
 
       @include size(505, 483);
-
     }
   }
+}
+
+.promo__image img {
+  position: relative;
 }
 
 .promo__button {

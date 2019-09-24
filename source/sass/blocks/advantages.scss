@@ -1,7 +1,30 @@
 .advantages {
+  position: relative;
   padding-top: 95px;
+
   color: $gray-darkest;
   background-color: $white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 1177px;
+
+    background-image: url("../img/bg-polygon2.svg");
+    background-repeat: no-repeat;
+    background-position: left calc(50% - 130px) top -30px;
+
+    @media (max-width: $tablet-width) {
+      top: 360px;
+      height: 605px;
+      background-image: url("../img/bg-polygon2-tablet.svg");
+      background-position: center bottom;
+    }
+  }
 
   @media (max-width: $tablet-width) {
     padding-top: 40px;
