@@ -173,13 +173,13 @@
       background-size: 100% auto;
     }
 
-      @media (max-width: $mobile-width) {
-        top: -130px;
-        left: 125px;
+    @media (max-width: $mobile-width) {
+      top: -130px;
+      left: 125px;
 
-        @include size(505, 483);
+      @include size(505, 483);
 
-      }
+    }
   }
 }
 

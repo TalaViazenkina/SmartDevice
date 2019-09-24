@@ -1,13 +1,10 @@
 .feedback {
   padding-top: 95px;
   padding-bottom: 95px;
+  overflow-x: hidden;
   color: $white;
 
   background-color: $blue;
-  background-image: url("../img/bg-polygon3.svg");
-  background-repeat: no-repeat;
-  background-position: right, bottom;
-  background-size: 90% auto;
 
   @media (max-width: $tablet-width) {
     padding-top: 80px;
@@ -24,6 +21,11 @@
     padding-right: 25px;
     padding-bottom: 25px;
     padding-left: 25px;
+
+    .feedback__wrapper::before,
+    .feedback__wrapper::after {
+      display: none;
+    }
 
     h2 {
       margin-bottom: 15px;
@@ -87,19 +89,36 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -5%;
-    width: 50%;
+    top: -110px;
+    left: -195px;
 
-    background-image: url("../img/paper_airplane@1x.png");
+    @include size(686, 641);
+
+    background-image:
+      url("../img/paper_airplane@1x.png"),
+      url("../img/bg-polygon.svg");
     background-repeat: no-repeat;
-    background-position: center 35%;
-    background-size: 86%;
+    background-position: right center , left -5px bottom 45px; ;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/paper_airplane@2x.png");
     }
+
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+   &::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -440px;
+
+    @include size(375, 536);
+    background-image: url("../img/bg-polygon3.svg");
+    background-repeat: no-repeat;
+    background-position: center top -50px;
 
     @media (max-width: $tablet-width) {
       display: none;
@@ -281,11 +300,7 @@
     align-self: flex-start;
     width: 17px;
     height: 16px;
-    border: 1px solid transparent;
-
-    @media (max-width: $tablet-width) {
-      border-color: $white;
-    }
+    border: 1px solid $white;
 
     @media (max-width: $mobile-width) {
       left: 0;
