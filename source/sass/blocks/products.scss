@@ -73,11 +73,6 @@
 
   @include interactive();
 
-  @media (max-width: $tablet-width) {
-    height: 256px;
-    overflow: hidden;
-  }
-
   &::before {
     content: "";
     position: absolute;
@@ -106,10 +101,30 @@
   }
 }
 
+.products__image {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media (max-width: $tablet-width) {
+    height: 256px;
+    overflow: hidden;
+  }
+}
+
 .products__link img {
   display: block;
   width: 100%;
   opacity: 0.2;
+
+  @media (max-width: $tablet-width) {
+    position: absolute;
+    top: -470px;
+  }
+
+  @media (max-width: $mobile-width) {
+     top: -110px;
+  }
 }
 
 .products__link h3 {
