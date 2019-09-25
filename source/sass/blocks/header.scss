@@ -11,6 +11,7 @@
 }
 
 .header__logo {
+  margin-right: 15px;
   @media (max-width: $mobile-width) {
     width: 38px;
     height: 38px;
@@ -30,9 +31,11 @@
 
 .header__nav {
   margin-left: auto;
+  margin-right: auto;
 
   @media (max-width: $tablet-width) {
     padding-bottom: 10px;
+    margin-right: 0;
   }
 }
 
@@ -66,7 +69,8 @@
 .header__contacts {
   display: flex;
   align-items: center;
-  width: 67.5%;
+  flex-wrap: wrap;
+  width: 45%;
   margin-left: auto;
 
   @media (max-width: $tablet-width) {
@@ -79,7 +83,7 @@
 .header__link {
   display: flex;
   align-items: center;
-  margin-left: 65 / 660 * 100%;
+  margin-left: 65 / 440 * 100%;
   line-height: 22px;
   color: $white;
 
@@ -116,7 +120,7 @@
 }
 
 .header__button {
-  margin-left: 35 / 660 * 100%;
+  margin-left: 45px;
 
   @media (max-width: $tablet-width) {
     display: none;
