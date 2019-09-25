@@ -199,7 +199,9 @@
   order: 1;
 }
 
-.feedback__item input:not([type="checkbox"]) {
+.feedback__item input[type="text"],
+.feedback__item input[type="tel"],
+.feedback__item input[type="email"] {
   width: 100%;
   height: 50px;
   padding-top: 10px;
