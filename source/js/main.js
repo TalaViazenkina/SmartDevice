@@ -184,3 +184,15 @@ if (footerContact) {
     });
   }
 }
+
+
+// прокрутка к якорю
+var hiddenElement = document.querySelector('section.advantages');
+var btn = document.querySelector('.promo__scroll');
+
+var onLinkAnchorClick = function (evt) {
+  evt.preventDefault();
+  hiddenElement.scrollIntoView({block: 'start', behavior: 'smooth'});
+};
+
+btn.addEventListener('click', onLinkAnchorClick);
