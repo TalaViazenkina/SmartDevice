@@ -76,3 +76,8 @@ img {
 
   clip: rect(0 0 0 0);
 }
+
+.noscroll {
+  overflow: hidden;
+  max-height: 100vh;
+}

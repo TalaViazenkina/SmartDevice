@@ -23,6 +23,7 @@ var userName = popup.querySelector('#modal-name');
 var userTel = popup.querySelector('#modal-tel');
 var userMessage = popup.querySelector('textarea');
 var overlay = document.querySelector('.overlay');
+var body = document.querySelector('body');
 
 var isStorageSupport = true;
 var storageName = '';
@@ -56,6 +57,10 @@ var closePopup = function () {
   popupCloseButton.removeEventListener('click', onButtonClick);
   overlay.removeEventListener('click', onOverlayClick);
   document.removeEventListener('keydown', onPopapEscPress);
+
+  if (body) {
+    body.classList.remove('noscroll');
+  }
 };
 
 /**
@@ -92,6 +97,10 @@ if (popupOpenButton) {
     evt.preventDefault();
     if (popup) {
       popup.classList.add('modal_show');
+      if (body) {
+        body.classList.add('noscroll');
+      }
+
       if (popupCloseButton) {
         popupCloseButton.addEventListener('click', onButtonClick);
       }
