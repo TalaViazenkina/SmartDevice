@@ -190,9 +190,11 @@ if (footerContact) {
 var hiddenElement = document.querySelector('section.advantages');
 var btn = document.querySelector('.promo__scroll');
 
-var onLinkAnchorClick = function (evt) {
-  evt.preventDefault();
-  hiddenElement.scrollIntoView({block: 'start', behavior: 'smooth'});
-};
+if (hiddenElement && btn) {
+  var onLinkAnchorClick = function (evt) {
+    evt.preventDefault();
+    hiddenElement.scrollIntoView({block: 'start', behavior: 'smooth'});
+  };
 
-btn.addEventListener('click', onLinkAnchorClick);
+  btn.addEventListener('click', onLinkAnchorClick);
+}
