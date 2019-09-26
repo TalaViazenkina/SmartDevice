@@ -281,13 +281,14 @@
 
   @media (max-width: $tablet-width) {
     justify-content: flex-start;
+
     p:first-child {
       display: none;
     }
   }
 
   @media (max-width: $mobile-width) {
-     min-width: 100%
+    min-width: 100%;
   }
 }
 
@@ -333,7 +334,6 @@
     margin-left: 0;
     margin-top: 0;
     margin-bottom: 0;
-
   }
 
   @media (max-width: $mobile-width) {
@@ -341,8 +341,5 @@
     padding-bottom: 25px;
     margin-right: auto;
     margin-left: auto;
-
-
   }
-
 }
