@@ -198,3 +198,4 @@ if (hiddenElement && btn) {
 
   btn.addEventListener('click', onLinkAnchorClick);
 }
+
