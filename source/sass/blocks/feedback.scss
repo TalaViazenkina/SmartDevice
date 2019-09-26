@@ -99,9 +99,12 @@
       url("../img/bg-polygon.svg");
     background-repeat: no-repeat;
     background-position: right center, left -5px bottom 45px;
+    background-size: 511px auto, 671px 641px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/paper_airplane@2x.png");
+      background-image:
+        url("../img/paper_airplane@2x.png"),
+        url("../img/bg-polygon.svg");
     }
 
     @media (max-width: $tablet-width) {
