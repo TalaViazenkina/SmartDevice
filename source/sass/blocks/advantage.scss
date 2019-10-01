@@ -12,6 +12,9 @@
   border: 1px solid $gray;
   border-left: 3px solid $blue;
 
+  transition-property: color,  background-color;
+  transition-duration: 0.3s;
+
   &:hover {
     color: $white;
     background-color: $blue;
