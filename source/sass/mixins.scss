@@ -15,7 +15,7 @@
 
 @mixin interactive() {
   transition-property: opacity;
-  transition-duration: 0.3s;
+  transition-duration: $animation-speed;
 
   &:hover,
   &:focus {

@@ -218,7 +218,7 @@
   border: 1px solid transparent;
 
   transition-property: border-color;
-  transition-duration: 0.3s;
+  transition-duration: $animation-speed;
 
   &::-webkit-input-placeholder {
     color: $white;
@@ -257,7 +257,7 @@
   border: 1px solid transparent;
 
   transition-property: border-color;
-  transition-duration: 0.3s;
+  transition-duration: $animation-speed;
 
   &::-webkit-input-placeholder {
     color: $white;
@@ -302,7 +302,7 @@
   cursor: pointer;
 
   transition-property: opacity;
-  transition-duration: 0.3s;
+  transition-duration: $animation-speed;
 
   @media (max-width: $mobile-width) {
     padding-left: 30px;
