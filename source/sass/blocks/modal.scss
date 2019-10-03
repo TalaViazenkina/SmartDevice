@@ -1,3 +1,14 @@
+@keyframes opening {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 50%) scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 50%) scale(1);
+  }
+}
+
 .modal {
   position: fixed;
   bottom: 50%;
@@ -13,6 +24,8 @@
     display: block;
     overflow: auto;
     max-height: 80vh;
+    animation-name: opening;
+    animation-duration: $animation-speed;
   }
 }
 
