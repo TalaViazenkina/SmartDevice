@@ -1,13 +1,21 @@
 .header {
-  position: relative;
-  z-index: 1;
   padding-top: 33px;
   padding-bottom: 29px;
+
+  color: $white;
+
+
+  background-color: $gable-green;
 
   @media (max-width: $tablet-width) {
     padding-top: 20px;
     padding-bottom: 22px;
   }
+}
+
+.header__wrapper {
+  position: relative;
+  z-index: 1;
 }
 
 .header__logo {
