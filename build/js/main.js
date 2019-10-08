@@ -146,45 +146,35 @@ headerToggle.addEventListener('click', function () {
   }
 
   // открытие и закрытие меню в футере, мобильная версия
+  var footerToggles = document.querySelectorAll('.footer__toggle-wrapper');
+
   var footerNav = document.querySelector('.footer__nav');
-  var navToggle = document.querySelector('.footer__nav .footer__toggle');
-
   var footerContact = document.querySelector('.footer__contacts');
-  var contactToggle = document.querySelector('.footer__contacts .footer__toggle');
 
-  /**
-  * переключает класс
-  * @param {HTMLElement} el
-  * @param {string} class1
-  * @param {string} class2
-  */
+  if (footerToggles) {
+    var footerToggleArray = Array.prototype.slice.call(footerToggles);
 
-  var toggle = function (el, class1, class2) {
-    if (el.classList.contains(class1)) {
-      el.classList.remove(class1);
-      el.classList.add(class2);
-    } else {
-      el.classList.add(class1);
-      el.classList.remove(class2);
-    }
-  };
+    footerToggleArray.forEach(function (it) {
+      if (footerNav &&
+          it.parentElement === footerNav &&
+          footerNav.classList.contains('footer__info_nojs')) {
+        footerNav.classList.remove('footer__info_nojs');
+      } else if (footerContact &&
+                it.parentElement === footerContact &&
+                footerContact.classList.contains('footer__info_nojs')) {
+        footerContact.classList.remove('footer__info_nojs');
+      }
 
-  if (footerNav) {
-    footerNav.classList.remove('footer__info_nojs');
-    if (navToggle) {
-      navToggle.addEventListener('click', function () {
-        toggle(footerNav, 'footer__info_closed', 'footer__info_opened');
+      it.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        if (footerNav) {
+          footerNav.classList.toggle('footer__info_closed');
+        }
+        if (footerContact) {
+          footerContact.classList.toggle('footer__info_closed');
+        }
       });
-    }
-  }
-
-  if (footerContact) {
-    footerContact.classList.remove('footer__info_nojs');
-    if (contactToggle) {
-      contactToggle.addEventListener('click', function () {
-        toggle(footerContact, 'footer__info_closed', 'footer__info_opened');
-      });
-    }
+    });
   }
 
 
