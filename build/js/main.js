@@ -146,34 +146,59 @@ headerToggle.addEventListener('click', function () {
   }
 
   // открытие и закрытие меню в футере, мобильная версия
-  var footerToggles = document.querySelectorAll('.footer__toggle-wrapper');
-
   var footerNav = document.querySelector('.footer__nav');
+  if (footerNav) {
+    var footerNavToggle = footerNav.querySelector('.footer__toggle-wrapper');
+  }
+
   var footerContact = document.querySelector('.footer__contacts');
+  if (footerContact) {
+    var footerContactToggle = footerContact.querySelector('.footer__toggle-wrapper');
+  }
 
-  if (footerToggles) {
-    var footerToggleArray = Array.prototype.slice.call(footerToggles);
+  /**
+  * удаляет класс
+  * @param {HTMLElement} el
+  * @param {string} name
+  */
+  var classRemove = function (el, name) {
+    if (el.classList.contains(name)) {
+      el.classList.remove(name);
+    }
+  };
 
-    footerToggleArray.forEach(function (it) {
-      if (footerNav &&
-          it.parentElement === footerNav &&
-          footerNav.classList.contains('footer__info_nojs')) {
-        footerNav.classList.remove('footer__info_nojs');
-      } else if (footerContact &&
-                it.parentElement === footerContact &&
-                footerContact.classList.contains('footer__info_nojs')) {
-        footerContact.classList.remove('footer__info_nojs');
+  /**
+  * переключает класс
+  * @param {HTMLElement} el1
+  * @param {HTMLElement} el2
+  * @param {string} name
+  */
+  var classToggle = function (el1, el2, name) {
+    if (el1.classList.contains(name)) {
+      el1.classList.remove(name);
+      if (el2 && !el2.classList.contains(name)) {
+        el2.classList.add(name);
       }
+    } else {
+      el1.classList.add(name);
+    }
+  };
 
-      it.addEventListener('click', function (evt) {
-        evt.preventDefault();
-        if (footerNav) {
-          footerNav.classList.toggle('footer__info_closed');
-        }
-        if (footerContact) {
-          footerContact.classList.toggle('footer__info_closed');
-        }
-      });
+  if (footerNavToggle) {
+    classRemove(footerNav, 'footer__info_nojs');
+
+    footerNavToggle.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      classToggle(footerNav, footerContact, 'footer__info_closed');
+    });
+  }
+
+  if (footerContactToggle) {
+    classRemove(footerContact, 'footer__info_nojs');
+
+    footerContactToggle.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      classToggle(footerContact, footerNav, 'footer__info_closed');
     });
   }
 
