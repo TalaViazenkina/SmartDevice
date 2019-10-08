@@ -301,8 +301,8 @@
   display: block;
 }
 
-.feedback__agreement input[type="checkbox"]:focus ~ label {
-  opacity: 0.6;
+.feedback__agreement input[type="checkbox"]:focus ~ label::before {
+  background-color: rgba($white, 0.2);
 }
 
 .feedback__form button {
