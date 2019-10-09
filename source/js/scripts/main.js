@@ -77,8 +77,8 @@ headerToggle.addEventListener('click', function () {
   * @param {Event} evt
   */
   var onOverlayClick = function (evt) {
-    evt.preventDefault();
     if (evt.target === popup) {
+      evt.preventDefault();
       closePopup();
     }
   };
