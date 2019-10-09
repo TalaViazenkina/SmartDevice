@@ -24,7 +24,6 @@ headerToggle.addEventListener('click', function () {
   var userName = popup.querySelector('#modal-name');
   var userTel = popup.querySelector('#modal-tel');
   var userMessage = popup.querySelector('textarea');
-  var overlay = document.querySelector('.overlay');
   var body = document.querySelector('body');
 
   var isStorageSupport = true;
@@ -55,10 +54,9 @@ headerToggle.addEventListener('click', function () {
   */
   var closePopup = function () {
     popup.classList.remove('modal_show');
-    overlay.classList.remove('overlay_show');
     popupCloseButton.removeEventListener('click', onButtonClick);
-    overlay.removeEventListener('click', onOverlayClick);
-    document.removeEventListener('keydown', onPopapEscPress);
+    popup.removeEventListener('click', onOverlayClick);
+    document.removeEventListener('keydown', onPopupEscPress);
 
     if (body) {
       body.classList.remove('noscroll');
@@ -80,14 +78,16 @@ headerToggle.addEventListener('click', function () {
   */
   var onOverlayClick = function (evt) {
     evt.preventDefault();
-    closePopup();
+    if (evt.target === popup) {
+      closePopup();
+    }
   };
 
   /**
   * закрывает попап по esc
   * @param {Event} evt
   */
-  var onPopapEscPress = function (evt) {
+  var onPopupEscPress = function (evt) {
     if (isEscEvent(evt)) {
       closePopup();
     }
@@ -99,6 +99,7 @@ headerToggle.addEventListener('click', function () {
       evt.preventDefault();
       if (popup) {
         popup.classList.add('modal_show');
+        popup.addEventListener('click', onOverlayClick);
         if (body) {
           body.classList.add('noscroll');
         }
@@ -120,14 +121,8 @@ headerToggle.addEventListener('click', function () {
           userMessage.value = storageMessage;
         }
 
-        document.addEventListener('keydown', onPopapEscPress);
+        document.addEventListener('keydown', onPopupEscPress);
       }
-
-      if (overlay) {
-        overlay.classList.add('overlay_show');
-        overlay.addEventListener('click', onOverlayClick);
-      }
-
     });
   }
 
