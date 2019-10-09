@@ -1,11 +1,11 @@
 @keyframes opening {
   0% {
     opacity: 0;
-    transform: translate(-50%, 50%) scale(0);
+    transform:  scale(0);
   }
   100% {
     opacity: 1;
-    transform: translate(-50%, 50%) scale(1);
+    transform: scale(1);
   }
 }
 
@@ -15,25 +15,25 @@
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 2;
 
   display: none;
 
   background: rgba($black, 0.5);
 
   &_show {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     overflow: auto;
   }
 }
 
 .modal__inner {
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  z-index: 2;
+  position: relative;
   width: 490px;
-
-  transform: translate(-50%, 50%);
+  margin-top: auto;
+  margin-bottom: auto;
 
   animation-name: opening;
   animation-duration: $animation-speed;
